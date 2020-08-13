@@ -13,3 +13,8 @@ spring:
         password: admin
   rabbitmq:
     addresses: amqp://rabbitmq
+microservices:
+  endpoints:
+    endpoint:
+      airline:
+        getAirlineByName: http://airline-service/airline/getAirlineByName
