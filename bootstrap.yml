@@ -23,5 +23,8 @@ management:
     web:
       exposure:
         include: "*"
+  health:
+    mongo:
+      enabled: false
 server:
   port: 8000
