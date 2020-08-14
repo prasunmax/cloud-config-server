@@ -18,3 +18,8 @@ microservices:
     endpoint:
       airline:
         getAirlineByName: http://airline-service/airline/getAirlineByName
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
