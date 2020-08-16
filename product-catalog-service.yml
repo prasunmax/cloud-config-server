@@ -2,7 +2,6 @@ hibernate:
   ogm:
     datastore:
       create_database: true
-      database: Assignment
       host: mongo
       password: example
       port: 27017
