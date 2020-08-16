@@ -11,7 +11,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: product-catalog-service
-                fallbackuri: forward:/productFallback,flase
+                fallbackuri: forward:/productFallback,false
 hystrix:
   command:
     fallback:
