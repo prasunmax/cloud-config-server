@@ -6,7 +6,7 @@ spring:
         - id: product-catalog-service
           uri: lb://product-catalog-service
           predicates:
-            - Path=/api/products**/**
+            - Path=/api/products
           filters:
             - name: CircuitBreaker
               args:
