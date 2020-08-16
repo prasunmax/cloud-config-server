@@ -1,28 +1,17 @@
 
 spring:
-  application:
-    name: GATEWAY-SERVICE
   cloud:
     gateway:
       routes:
-        - id: airline-service
-          uri: lb://AIRLINE-SERVICE
+        - id: product-catalog-service
+          uri: lb://product-catalog-service
           predicates:
-            - Path=/airline/**
+            - Path=/api/products*/**
           filters:
             - name: CircuitBreaker
               args:
-                name: airline-service
-                fallbackuri: forward:/airlineFallback
-        - id: flight-service
-          uri: lb://FLIGHT-SERVICE
-          predicates:
-            - Path=/flight/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: airline-service
-                fallbackuri: forward:/flightFallback
+                name: product-catalog-service
+                fallbackuri: forward:/productFallback
 hystrix:
   command:
     fallback:
