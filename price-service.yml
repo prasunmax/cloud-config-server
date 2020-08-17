@@ -1,0 +1,12 @@
+
+hibernate:
+  ogm:
+    datastore:
+      create_database: true
+      host: mongo
+      password: example
+      port: 27017
+      provider: mongodb
+      username: root
+    mongodb:
+      authentication_database: admin
