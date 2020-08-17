@@ -28,3 +28,6 @@ management:
       enabled: false
 server:
   port: 8000
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
