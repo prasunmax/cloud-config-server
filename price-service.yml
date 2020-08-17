@@ -10,3 +10,8 @@ hibernate:
       username: root
     mongodb:
       authentication_database: admin
+microservices:
+  endpoints:
+    endpoint:
+      productCatalog:
+        products: http://product-catalog-service/api/products
