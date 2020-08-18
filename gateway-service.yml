@@ -12,6 +12,15 @@ spring:
               args:
                 name: product-catalog-service
                 fallbackuri: forward:/productFallback,false
+        - id: price-service
+          uri: lb://price-service
+          predicates:
+            - Path=/api/prices/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: price-service
+                fallbackuri: forward:/priceFallback,false
 hystrix:
   command:
     fallback:
