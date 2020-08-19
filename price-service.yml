@@ -14,4 +14,4 @@ microservices:
   endpoints:
     endpoint:
       productCatalog:
-        products: http://product-catalog-service/api/products
+        products: http://PRODUCT-CATALOG-SERVICE/api/products
