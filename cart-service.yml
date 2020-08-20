@@ -1,0 +1,5 @@
+microservices:
+  endpoints:
+    endpoint:
+      productCatalog:
+        products: product-catalog-service
