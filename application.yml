@@ -12,7 +12,7 @@ spring:
         username: admin
         password: admin
   rabbitmq:
-    addresses: amqp://rabbitmq
+    addresses: amqps://hvifsdtz:CkikAY7BrnXSjbppG4yMmLFV8mtPXzjo@finch.rmq.cloudamqp.com/hvifsdtz
 microservices:
   endpoints:
     endpoint:
