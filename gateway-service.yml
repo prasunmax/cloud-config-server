@@ -21,6 +21,24 @@ spring:
               args:
                 name: price-service
                 fallbackuri: forward:/priceFallback
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/api/cart/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: cart-service
+                fallbackuri: forward:/cartFallback
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: order-service
+                fallbackuri: forward:/orderFallback
 hystrix:
   command:
     fallback:
