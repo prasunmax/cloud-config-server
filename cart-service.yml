@@ -5,6 +5,6 @@ microservices:
         products: product-catalog-service
 spring:
   redis:
-    host: localhost
+    host: redis
     database: 0
-    port: 8001
+    port: 6379
