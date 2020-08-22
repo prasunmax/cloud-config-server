@@ -9,3 +9,10 @@ hibernate:
       username: root
     mongodb:
       authentication_database: admin
+microservices:
+  endpoints:
+    endpoint:
+      cart:
+        cart: cart-service
+      productCatalog:
+        products: product-catalog-service
