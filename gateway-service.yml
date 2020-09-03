@@ -56,3 +56,6 @@ management:
     web:
       exposure:
         include: "*"
+jwtExpirationInMs: 604800000
+jwtIteration: 33
+jwtKeyLength: 256
